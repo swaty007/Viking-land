@@ -1,0 +1,46 @@
+.logo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 140px;
+  &__pic{
+    width: 50px;
+    height: 54px;
+    margin-top: 10px;
+  }
+  &__title{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Source Sans Pro', $font-stack;
+    color: $black;
+    margin-left: 30px;
+  }
+}
+
+@include adaptive(tablet){
+  .logo{
+    margin-top: 11px;
+    &__pic{
+      width: 36px;
+      height: 38px;
+      margin-top: 0;
+    }
+    &__title{
+      font-size: 14px;
+      margin-left: 15px;
+    }
+  }
+}
+
+@include adaptive(mobile){
+  .logo{
+    margin-top: 17px;
+    &__pic{
+      width: 26px;
+      height: 28px;
+    }
+    &__title{
+      margin-left: 10px;
+    }
+  }
+}

@@ -1,0 +1,144 @@
+.testimonials{
+  background: $white-default url('../img/testimonials-bg.svg') center no-repeat;
+  padding-top: 124px;
+  &__content{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      width: 1340px;
+      height: 505px;
+      background: url('../img/testimonials-square.svg') right top no-repeat;
+      bottom: 0;
+      right: 46%;
+    }
+  }
+  &__desc{
+    width: 610px;
+  }
+  &__img{
+    margin-top: 45px;
+    position: relative;
+    left: -53px;
+    z-index: 1;
+  }
+  &__title{
+    margin-bottom: 75px;
+    line-height: 1;
+  }
+  &__info{
+    font-size: 18px;
+    opacity: .8;
+    line-height: 1.8;
+    padding-top: 52px;
+    margin-bottom: 48px;
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      width: 48px;
+      height: 33px;
+      left: 0;
+      top: 0;
+      background: url('../img/comma-icon.svg') center no-repeat;
+    }
+  }
+  &__name{
+    display: block;
+    color: $brand-purple;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+  &__post{
+    font-size: 20px;
+    color: $grey-dark;
+  }
+}
+
+@include adaptive(tablet){
+  .testimonials{
+    padding-top: 5px;
+    overflow-y: hidden;
+    background: none;
+    &__content{
+      flex-direction: column-reverse;
+      &:before{
+        bottom: -153px;
+        right: -18%;
+      }
+    }
+    &__title{
+      margin-bottom: 35px;
+    }
+    &__info{
+      font-size: 16px;
+      margin-bottom: 20px;
+      padding: 44px 50px 0;
+      line-height: 1.65;
+      &:before{
+        left: 50px;
+        width: 32px;
+        height: 22px;
+        -webkit-background-size: cover;
+        background-size: cover;
+      }
+    }
+    &__name{
+      font-size: 18px;
+      padding-left: 50px;
+      margin-bottom: 7px;
+    }
+    &__post{
+      font-size: 16px;
+      padding-left: 50px;
+    }
+    &__img{
+      width: 400px;
+      display: block;
+      margin: 0 auto -43px;
+      bottom: -55px;
+      left: -21px;
+    }
+  }
+}
+
+@include adaptive(mobile){
+  .testimonials{
+    &__desc{
+      width: 100%;
+    }
+    &__info{
+      padding: 30px 0 0;
+      font-size: 14px;
+      line-height: 1.75;
+      &:before{
+        left: 0;
+        width: 20px;
+        height: 14px;
+      }
+    }
+    &__title{
+      margin-bottom: 30px;
+    }
+    &__name, &__post{
+      padding-left: 0;
+    }
+    &__img{
+      width: 291px;
+      bottom: -45px;
+    }
+    &__content{
+      &:before{
+        width: 672px;
+        height: 220px;
+        bottom: 0;
+        right: 0;
+        -webkit-background-size: cover;
+        background-size: cover;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+// custom
+@mixin textDots($width: auto) {
+  @if ($width != auto) {
+    max-width: $width + px;
+  }
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

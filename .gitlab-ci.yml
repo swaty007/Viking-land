@@ -1,0 +1,39 @@
+# Select image from https://hub.docker.com
+image: alpine:3.7
+
+# Variables used in CI process
+variables:
+ TIMEZONE: "Europe/Kiev"
+ DOCKER_DRIVER: "overlay"
+ GIT_SSL_NO_VERIFY: "true"
+
+# Define stages (default: build, test, deploy)
+stages:
+# - test
+ - deploy
+
+# Run script before testing (prepare project environment). Called before all stages
+before_script:
+   - apk add --update openssh-client bash
+   - eval $(ssh-agent -s)
+   - mkdir -p ~/.ssh
+   - chmod 700 ~/.ssh
+   - echo "$DEMO_PRIVATE_KEY" | ssh-add - > ~/.ssh/id_rsa
+
+
+catena-dev.demo.gns-it.com:
+  only:
+   - develop
+  stage: deploy
+  when: on_success
+  script:
+   - ssh -o StrictHostKeyChecking=no "$DEPLOY_USER"@"$DEMO_SERVER" -p "$DEMO_SSH_PORT" 'cd /var/www/developers/catena.demo.gns-it.com/develop && sudo -u nginx git pull origin develop && sudo -u nginx bash deploy.sh'
+
+catena-master.demo.gns-it.com:
+  only:
+   - master
+  stage: deploy
+  when: on_success
+  script:
+   - ssh -o StrictHostKeyChecking=no "$DEPLOY_USER"@"$DEMO_SERVER" -p "$DEMO_SSH_PORT" 'cd /var/www/developers/catena.demo.gns-it.com/master && sudo -u nginx git pull origin master && sudo -u nginx bash deploy.sh'
+

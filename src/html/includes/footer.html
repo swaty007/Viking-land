@@ -1,0 +1,17 @@
+
+  <script src="js/bundle.js"></script>
+  <script>
+    function enable_btn() {
+      return new Promise(function(resolve, reject) {
+
+        document.querySelectorAll('.contacts__brand-btn').forEach(function(button) {
+          button.disabled = false;
+        });
+        resolve();
+
+      }); //end promise
+
+    }
+  </script>
+  </body>
+</html>

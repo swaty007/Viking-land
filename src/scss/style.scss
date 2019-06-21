@@ -1,0 +1,163 @@
+$font-stack: "Akzidenz - Grotesk Pro", "Open Sans", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+
+@import "~normalize.css/normalize.css";
+
+@import "basic/variables";
+@import "basic/mixins";
+@import "basic/grid";
+
+h1, h2, h3, h4, p {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $brand-blue;
+  outline: none;
+}
+
+body {
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.375;
+  font-family: $font-stack;
+  font-weight: 400;
+  color: $white-default;
+  background-color: $black-default;
+  overflow-x: hidden;
+}
+
+.main-title {
+  font-size: 60px;
+  font-weight: 700;
+  font-family: $font-stack;
+  margin-bottom: 25px;
+  line-height: 1.2;
+  &--light{
+    color: $white-default;
+  }
+  &--nofull{
+    max-width: 630px;
+  }
+}
+
+.second-title {
+  font-size: 46px;
+  font-weight: 700;
+  font-family: $font-stack;
+  text-align: center;
+  &--left{
+    text-align: left;
+  }
+  &--light{
+    color: $white-default;
+  }
+}
+
+.main-text{
+  color: $white-default;
+  font-family: $font-stack;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.18px;
+  line-height: 28px;
+  &--left{
+    text-align: left;
+  }
+  &--nofull{
+    max-width: 630px;
+  }
+}
+
+.white-text{
+
+}
+
+.main-list{
+  &--red{
+    .main-list__item{
+      &:before{
+        background: $brand-red;
+      }
+    }
+  }
+}
+
+.main-list__item{
+  position: relative;
+  font-size: 18px;
+  padding-left: 30px;
+  opacity: .8;
+  line-height: 1.7;
+  &:not(:last-child){
+    margin-bottom: 37px;
+  }
+  &:before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: $brand-purple;
+    left: 1px;
+    top: 13px;
+  }
+}
+
+.default-input{
+  margin-bottom: 19px;
+  &__label{
+    display: block;
+    color: $grey-dark;
+    position: relative;
+    line-height: 1;
+    margin-bottom: 9px;
+    padding-left: 12px;
+    &--required{
+      &:after{
+        content: '*';
+        position: absolute;
+        font-size: 16px;
+        color: $brand-red;
+        margin-left: 3px;
+      }
+    }
+  }
+  &__input{
+    border: 1px solid $grey-border;
+    border-radius: 21px;
+    height: 42px;
+    max-width: 100%;
+    width: 370px;
+    outline: none;
+    padding: 0 12px;
+    background: $white-default;
+  }
+  &__textarea{
+    display: block;
+    resize: none;
+    outline: none;
+    padding: 12px;
+    width: 470px;
+    max-width: 100%;
+    height: 212px;
+    border: 1px solid $grey-border;
+    border-radius: 21px;
+    background: $white-default;
+  }
+}
+
+@import "sections/header";
+
