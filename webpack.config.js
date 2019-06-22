@@ -98,7 +98,8 @@ const config = {
       },
       {
         test: /\.html$/,
-        include: path.resolve(__dirname, "src/html/includes"),
+        // include: path.resolve(__dirname, "src/html/includes"),
+        exclude: path.resolve(__dirname, "src/html/views"),
         use: ["raw-loader"]
       }
     ]
