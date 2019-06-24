@@ -1,0 +1,37 @@
+<% var data = {
+title: "Norvegr",
+h1: "Norvegr",
+header_img: "img/norvegr.svg",
+};%>
+
+<%= _.template(require('./../includes/head.html'))(data) %>
+<%= _.template(require('./../includes/header.html'))(data) %>
+
+
+
+<%= _.template(require('./../components/scroll-to-read.html'))({id: '#norvegr'}) %>
+
+<section id="norvegr" class="norvegr">
+    <div class="container">
+        <div class="main-item">
+            <p class="main-text">
+                The way north is the literal meaning of the word Norway.  Norwegr in ancient Norse.  A language that has influenced the English language more than is commonly known.  This is the fact-based account putting the Viking times into a context of European history and migration.
+            </p>
+            <p class="main-text">
+                From more than ten thousand years ago when the ice starts receding, revealing the country underneath. The revelation of mountains and fjords subsequently providing land for cultivation and the people that survived this harsh habitat.
+            </p>
+            <p class="main-text">
+                The emergence of the Viking times, - a period starting in the late seven hundred AD lasting to the transition into the conversion from paganism to the Christian faith some three hundred years later.
+            </p>
+            <p class="main-text">
+                Ultimately this film takes a time travel leap from the Futhark alphabet and the times of the Viking runes - into the digital age and the resurgence of Viking culture and storytelling in contemporary entertainment.
+            </p>
+            <p class="main-text">
+                Titles like Thor, Vikings, The Game of thrones and Skyrim as well as the classic Lord of the rings, are all works of fiction in debt to the Viking saga´s narrative, characters and compelling universe.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<%= _.template(require('./../includes/footer.html'))(data) %>

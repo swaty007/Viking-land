@@ -1,0 +1,31 @@
+<% var data = {
+title: "The Helmet",
+h1: "The Helmet",
+header_img: "img/helmet_head.svg",
+};%>
+
+<%= _.template(require('./../includes/head.html'))(data) %>
+<%= _.template(require('./../includes/header.html'))(data) %>
+
+
+
+<%= _.template(require('./../components/scroll-to-read.html'))({id: '#helmet'}) %>
+
+
+<section id="helmet" class="helmet">
+    <div class="container">
+        <div class="main-item">
+            <p class="main-text">With unique combination of classic cinematic storytelling and innovative 270- degree filmmaking, we are inviting the audience to step into the Viking times.
+                Inside a seven by eight meter Viking helmet theatre and with a screen spanning the entire volume of the interior space, various memorable moments from daily life more than a thousand years ago, are unfolding either as full 270 immersive and VR like immersion - or as a mosaic of multiple cinema images playing simultaneously, accompanied by a soundtrack and atmospheric soundscapes.
+            </p>
+            <p class="main-text">This epic 14 minutes film runs four times an hour continuously as an installation where the audience can enter and exit the venue freely.</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<%= _.template(require('./../includes/footer.html'))(data) %>

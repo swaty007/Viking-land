@@ -1,0 +1,17 @@
+<% var data = {
+title: "THE HOLOGRAM THEATRE",
+h1: "THE<br> HOLOGRAM<br> THEATRE",
+header_img: "img/hologram-theatre.svg",
+};%>
+
+<%= _.template(require('./../includes/head.html'))(data) %>
+<%= _.template(require('./../includes/header.html'))(data) %>
+
+
+
+<%= _.template(require('./../components/scroll-to-read.html'))({id: '#hologram-theatre'}) %>
+
+<%= _.template(require('./../sections/hologram-theatre.html'))(data) %>
+
+
+<%= _.template(require('./../includes/footer.html'))(data) %>

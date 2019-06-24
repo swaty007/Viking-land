@@ -116,6 +116,10 @@ const config = {
       {
         from: "./src/img",
         to: "./img"
+      },
+      {
+        from: "./src/scss/fonts",
+        to: "./fonts"
       }
     ])
   ].concat(htmlPlugins, phpPlugins)

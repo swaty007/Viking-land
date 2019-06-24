@@ -1,0 +1,33 @@
+.language {
+  margin-top: 60px;
+  &__list {
+    max-width: 280px;
+    background: $black-default;
+    border: 1px solid fade-out($white-default,.65);
+    margin: 60px auto;
+  }
+  &__item {
+    font-family: $font-stack;
+    color: $white-default;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 4.2px;
+    text-transform: uppercase;
+    line-height: 41px;
+    padding-left: 30px;
+    transition: 0.3s all;
+    cursor: pointer;
+    outline: none;
+    &:not(:last-child) {
+      border-bottom: 1px solid fade-out($white-default,.65);
+    }
+    &:hover {
+      color: $black;
+      background: $white-default;
+    }
+  }
+  &__flag {
+    height: 41px;
+    float: right;
+  }
+}

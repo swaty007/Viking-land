@@ -1,0 +1,13 @@
+.scroll-btn {
+  margin-bottom: 100px;
+  text-align: center;
+  outline: none;
+  text-decoration: none!important;
+  color: $white-default;
+  display: block;
+  &__img {
+    width: 21px;
+    display: block;
+    margin: 15px auto 0;
+  }
+}

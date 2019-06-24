@@ -1,0 +1,17 @@
+<% var data = {
+title: "Explore the viking culture",
+h1: "ExplorE<br> the viking<br> culture",
+header_img: "",
+};%>
+
+<%= _.template(require('./../includes/head.html'))(data) %>
+<%= _.template(require('./../includes/header.html'))(data) %>
+
+
+
+<%= _.template(require('./../components/scroll-to-read.html'))({id: '#viking-culture'}) %>
+
+<%= _.template(require('./../sections/viking-culture.html'))(data) %>
+
+
+<%= _.template(require('./../includes/footer.html'))(data) %>

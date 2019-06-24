@@ -1,7 +1,8 @@
-$font-stack: "Akzidenz - Grotesk Pro", "Open Sans", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+$font-stack: 'Akzidenz Grotesk Pro', "Open Sans", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
 
 @import "~normalize.css/normalize.css";
 
+@import "basic/fonts";
 @import "basic/variables";
 @import "basic/mixins";
 @import "basic/grid";
@@ -10,7 +11,6 @@ h1, h2, h3, h4, p {
   padding: 0;
   margin: 0;
 }
-
 * {
   box-sizing: border-box;
 }
@@ -39,12 +39,17 @@ body {
   overflow-x: hidden;
 }
 
+img {
+  max-width: 100%;
+}
+
 .main-title {
-  font-size: 60px;
-  font-weight: 700;
   font-family: $font-stack;
   margin-bottom: 25px;
   line-height: 1.2;
+  font-size: 21px;
+  font-weight: 400;
+  text-transform: uppercase;
   &--light{
     color: $white-default;
   }
@@ -54,15 +59,27 @@ body {
 }
 
 .second-title {
-  font-size: 46px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 500;
   font-family: $font-stack;
   text-align: center;
+  text-transform: uppercase;
+  line-height: 25px;
+  &--big {
+    font-size: 21px;
+    font-weight: 400;
+  }
   &--left{
     text-align: left;
   }
   &--light{
     color: $white-default;
+  }
+  &--blue {
+    color: $brand-blue;
+  }
+  span {
+    color: $brand-blue;
   }
 }
 
@@ -81,40 +98,6 @@ body {
   }
 }
 
-.white-text{
-
-}
-
-.main-list{
-  &--red{
-    .main-list__item{
-      &:before{
-        background: $brand-red;
-      }
-    }
-  }
-}
-
-.main-list__item{
-  position: relative;
-  font-size: 18px;
-  padding-left: 30px;
-  opacity: .8;
-  line-height: 1.7;
-  &:not(:last-child){
-    margin-bottom: 37px;
-  }
-  &:before{
-    content: '';
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: $brand-purple;
-    left: 1px;
-    top: 13px;
-  }
-}
 
 .default-input{
   margin-bottom: 19px;
@@ -160,4 +143,7 @@ body {
 }
 
 @import "sections/header";
+@import "components/main-item";
+@import "components/language";
+@import "components/scroll-btn";
 

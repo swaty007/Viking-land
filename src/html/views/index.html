@@ -1,7 +1,7 @@
 <% var data = {
   title: "THE VIKING AGE",
   h1: "THE VIKING AGE",
-  header_img: "img/helmet_head.svg",
+  header_img: "",
 };%>
 
 <%= _.template(require('./../includes/head.html'))(data) %>
@@ -9,10 +9,13 @@
 
 
 
+<%= _.template(require('./../components/scroll-to-read.html'))({id: '#viking-age'}) %>
+
 
 <%= _.template(require('./../sections/viking-age.html'))(data) %>
+<%= _.template(require('./../components/language.html'))(data) %>
 
-${require('./../components/_scroll-to-read.html')}
+
 
 
 
