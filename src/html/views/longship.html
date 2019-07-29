@@ -11,20 +11,7 @@ header_img: "img/longship.svg",
 
 <%= _.template(require('./../components/scroll-to-read.html'))({id: '#longship'}) %>
 
-<section id="longship" class="longship">
-    <div class="container">
-       <div class="main-item">
-           <p class="main-text">In groundbreaking volumetric capture VR, with haptic 4D chairs and with a cinema soundtrack, - the audience will be transported back more than a thousand years ago to the western coast of Norway, outside of Karmøy.
-               Onboard a Viking ship during a Viking raid at the end of the ninth century. Based on thousands of photogrammetric images shot on the real location in Norway and with a vast number of actors and stunt performers captured live in a volumetric green screen studio with more than a hundred cameras to be programmed inside a game engine, this is the first Virtual Reality experience of its kind in the world.
-               The story starts around the campfire where the films protagonist tells his tale leading us to the nerve wrecking raid itself, where many men will meet their maker.
-           </p>
-           <p class="main-text">
-               The Ambush is showing four times an hour and has a running time of 12 minutes and is one of several immersive experiences in The Viking Planet.
-               Produced in collaboration with RSA Films and Dimension Studio in the UK.
-           </p>
-       </div>
-    </div>
-</section>
+<%= _.template(require('./../sections/viking-longship.html'))(data) %>
 
 
 <%= _.template(require('./../includes/footer.html'))(data) %>

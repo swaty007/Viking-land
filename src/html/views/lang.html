@@ -1,0 +1,13 @@
+<% var data = {
+title: "Select Language",
+h1: "",
+header_img: "",
+};%>
+
+<%= _.template(require('./../includes/head.html'))(data) %>
+
+
+<%= _.template(require('./../components/language.html'))() %>
+
+
+<%= _.template(require('./../includes/footer.html'))(data) %>
